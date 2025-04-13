@@ -2,7 +2,8 @@ pipeline {
     agent any
 	 parameters {
 		//string(name: 'environment', defaultValue: 'dev', description: 'Environment to build for (Valid values: Dev, Test, Prod)')
-	          choice(choices: 'environment' description: 'What is env', name: 'dev','test','prod')					
+                  choice(name: 'environment', choices: ['dev', 'test', 'prod'], description: 'Select the target environment')  
+ 					
                     }
 
     stages{
