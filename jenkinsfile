@@ -1,16 +1,17 @@
- pipeline {
+pipeline {			
     agent any
-     tools {
-        // Install the Maven version configured as "M3" and add it to the path.
-        maven "maven"
-    }
+	 parameters {
+		string(name: 'environment', defaultValue: 'Dev', description: 'Environment to build for (Valid values: Dev, Test, Prod)')
+						
+                    }
 
-    stages {
-        stage('maven build') {
-            steps {
-                sh 'mvn package'
-            }
-        }
-		
-    }
+    stages{
+        stage('Build'){	
+			
+            steps{			
+			sh 'cd "${environment}"'
+                        sh 'sh dev.sh'
+			}
+        }			
+    }			
 }
