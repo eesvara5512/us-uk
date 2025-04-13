@@ -1,1 +1,1 @@
-run prod env
+echo "run prod env"
