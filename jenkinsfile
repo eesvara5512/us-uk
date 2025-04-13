@@ -11,7 +11,7 @@ pipeline {
             steps{			
 			sh 'cd "${environment}"'
                         sh  'pwd'
-                        sh 'sh dev.sh'
+                        sh 'sh /var/lib/jenkins/workspace/paramters-test/dev/dev.sh'
 			}
         }			
     }			
