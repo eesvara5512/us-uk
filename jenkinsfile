@@ -1,7 +1,7 @@
 pipeline {			
     agent any
 	 parameters {
-		string(name: 'environment', defaultValue: 'Dev', description: 'Environment to build for (Valid values: Dev, Test, Prod)')
+		string(name: 'environment', defaultValue: 'dev', description: 'Environment to build for (Valid values: Dev, Test, Prod)')
 						
                     }
 
