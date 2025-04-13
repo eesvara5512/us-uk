@@ -1,1 +1,1 @@
-run test env
+echo "run test env"
