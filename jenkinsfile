@@ -12,7 +12,7 @@ pipeline {
             steps{			
 			sh 'cd "${environment}"'
                         sh  'pwd'
-                        sh 'sh /var/lib/jenkins/workspace/paramters-test/"${environment}"/dev.sh'
+                        sh 'sh /var/lib/jenkins/workspace/paramters-test/"${environment}"/"${environment}".sh'
 			}
         }			
     }			
