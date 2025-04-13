@@ -10,6 +10,7 @@ pipeline {
 			
             steps{			
 			sh 'cd "${environment}"'
+                        sh  pwd
                         sh 'sh dev.sh'
 			}
         }			
